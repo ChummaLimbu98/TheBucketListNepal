@@ -13,18 +13,18 @@ describe('Booking on The Bucket List Nepal website', () => {
     //cy.contains('Date').type(6/13/2923)
     
     //No_of_travellers:
-    cy.get('.v-input__append-inner > .v-icon').click()
+    // cy.get('.v-input__append-inner > .v-icon').click()
 
-    cy.get('input[name="no_of_travellers"]')
+    // cy.get('input[name="no_of_travellers"]')
 
-    cy.get('<your-selector>').invoke('attr', 'name').then((name) => {
-      cy.log('no_of_travellers:', name);
-    });
+    // cy.get('<your-selector>').invoke('attr', 'name').then((name) => {
+    //   cy.log('no_of_travellers:', name);
+    // });
     
-    cy.get('<your-selector>').invoke('attr', 'id').then((id) => {
-      cy.log('input-58:', id);
-    })
-    cy.get('input[type="text"]')
+    // cy.get('<your-selector>').invoke('attr', 'id').then((id) => {
+    //   cy.log('input-58:', id);
+    // })
+    // cy.get('input[type="text"]')
 
     // Leader detail name section
   cy.get('input[name="fname"]').type('John') // Replace 'name' with the actual name attribute value
