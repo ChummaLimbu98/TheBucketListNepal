@@ -7,7 +7,7 @@ describe('Booking page',()=>{
         cy.get('form > :nth-child(1) > .container > .row').click()
         cy.get('.booking-bottom-row > :nth-child(1)').click()
 
-        const desiredDate = '2023-06-19'; // Replace with the desired date in 'YYYY-MM-DD' format
+       // const desiredDate = '2023-06-19'; // Replace with the desired date in 'YYYY-MM-DD' format
 
         // Wait for the input field to be visible and interactable
         cy.get('#input-67', { timeout: 10000 }).should('be.visible').click();
