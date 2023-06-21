@@ -32,7 +32,7 @@ describe('Booking on The Bucket List Nepal website', () => {
     cy.get('input[id="input-66"]') 
     cy.get('input[type="text"]')
 
-    //cy.get('input[name="email"]').should('have.value', '')
+    cy.get('input[name="email"]').should('have.value', '')
 
     //Budget
     cy.get('input[name="budget"]').type('10000') 
