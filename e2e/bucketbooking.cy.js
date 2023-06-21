@@ -4,41 +4,35 @@ describe('Booking on The Bucket List Nepal website', () => {
     it('Should successfully book for tour', () => {
       cy.visit('https://www.test.thebucketlistnepal.com/booking')
 
-    // To find the booking page
       cy.get('.book-btn > .v-btn__content').click()
 
-    //Main detail section
+    function generateRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Enter the date and number of traveller:
     cy.get('form > :nth-child(1) > .container > .row').click()
     cy.get(':nth-child(1) > .container > .row > :nth-child(1) > :nth-child(1) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot').click()
-    //cy.contains('Date').type(6/13/2923)
+    cy.get('input[name="date"]').invoke('removeAttr', 'readonly').type('2023-06-30');
+
+    cy.get('input[name="no_of_travellers"]').type('6');
+
     
-    //No_of_travellers:
-    // cy.get('.v-input__append-inner > .v-icon').click()
-
-    // cy.get('input[name="no_of_travellers"]')
-
-    // cy.get('<your-selector>').invoke('attr', 'name').then((name) => {
-    //   cy.log('no_of_travellers:', name);
-    // });
-    
-    // cy.get('<your-selector>').invoke('attr', 'id').then((id) => {
-    //   cy.log('input-58:', id);
-    // })
-    // cy.get('input[type="text"]')
-
     // Leader detail name section
-  cy.get('input[name="fname"]').type('John') // Replace 'name' with the actual name attribute value
-  cy.get('input[id="input-62"]')
-  cy.get('input[type="text"]')
+    cy.get('input[name="fname"]').type('John') // Replace 'name' with the actual name attribute value
+    cy.get('input[id="input-62"]')
+    cy.get('input[type="text"]')
 
-  cy.get('input[name="lname"]').type('Doe') // Replace 'name' with the actual lname attribute value
-  cy.get('input[id="input-62"]')
-  cy.get('input[type="text"]')
+    cy.get('input[name="lname"]').type('Doe') // Replace 'name' with the actual lname attribute value
+    cy.get('input[id="input-62"]')
+    cy.get('input[type="text"]')
 
-  // //Email
-    cy.get('input[name="email"]').type('johndoe@gmail.com') 
+    //Email
+    cy.get('input[name="email"]').type('johndoe101@gmail.com') 
     cy.get('input[id="input-66"]') 
     cy.get('input[type="text"]')
+
+    //cy.get('input[name="email"]').should('have.value', '')
 
     //Budget
     cy.get('input[name="budget"]').type('10000') 
@@ -51,7 +45,7 @@ describe('Booking on The Bucket List Nepal website', () => {
     cy.get('input[type="text"]')
 
     // Phone number:
-    cy.get('input[name="phone"]').type('9865431121') 
+    cy.get('input[name="phone"]').type('9862658297') 
     cy.get('input[type="text"]')
 
   
