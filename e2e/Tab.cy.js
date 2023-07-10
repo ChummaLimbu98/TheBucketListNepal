@@ -27,6 +27,7 @@ describe('Handle tabs',()=>{
         cy.wait(5000)
         //operation
         cy.go('back') //Back to parent tab
+        //cy.go('back')
 
 })
 })

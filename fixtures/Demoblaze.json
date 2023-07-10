@@ -1,0 +1,17 @@
+[
+    {
+        "loginusername": "adminab",
+        "loginpassword": "adminab",
+        "Expected": "Home"
+    },
+    {
+        "loginusername": "xyz",
+        "loginpassword": "adminab",
+        "Expected": "wrong password"
+    },
+    {
+        "loginusername": "adminab",
+        "loginpassword": "xyz",
+        "Expected": "wrong password"
+    }
+    ]
