@@ -17,9 +17,14 @@ describe('mysuite', function () {
     it('capture screenshot ', function () {
 
         cy.visit('https://www.demoblaze.com/index.html')
-        cy.screenshot('Homepage')
-       // cy.get('#nava').screenshoot('logo')
+       // cy.screenshot('Homepage')
+        cy.wait(5000)
+        //cy.get('#nava').screenshot('logo')
         //cy.get('#login2').should('contain', 'Log inn')
+    
+        //Automatatically capture screenshoot and video on failure- only when we execute through CLI
+        cy.get('li:nth-child(7) a:nth-child(1)').click()
+        cy.get("div[id='content'] h2").should('have.text',"Tablets")
     })
 
 })
