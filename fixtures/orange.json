@@ -13,5 +13,31 @@
     "Username": "Admin",
     "password": "xyz",
     "expected": "Invalid credentials"
+},
+{
+    "Username": "Admin",
+    "password": " ",
+    "expected": "Invalid credentials"
+},
+{
+    "Username": "  ",
+    "password": "admin123",
+    "expected": "Invalid credentials"
+},
+{
+    "Username": "12345",
+    "password": "12345",
+    "expected": "Invalid credentials"
+},
+{
+    "Username": "@@@Admin",
+    "password": "admin123",
+    "expected": "Invalid credentials"
+},
+{
+    "Username": "Admin",
+    "password": "@@@admin123",
+    "expected": "Invalid credentials"
 }
+
 ]
