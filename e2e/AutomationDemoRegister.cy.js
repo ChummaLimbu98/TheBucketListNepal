@@ -5,7 +5,7 @@ describe("Automation demo site", function () {
         cy.visit("https://demo.automationtesting.in/Register.html")
 
     })
-    it("Describs input field", function () {
+    it.only("Describs input field", function () {
         cy.get("input[placeholder='First Name']").type("Ram")
         cy.get("input[placeholder='Last Name']").type("Shah")
         cy.get('.col-md-8 > .form-control').type('KTM')
@@ -14,9 +14,7 @@ describe("Automation demo site", function () {
         cy.wait(5000)
     })
     it("Radio button check section", function () {
-
-        // cy.get("input[value='Male']").should('be.visible')
-        // cy.get("input[value='FeMale']").should('be.visible')
+        
         cy.get("input[value='Male']").check().should('be.checked')
         cy.get("input[value='FeMale']").check().should('be.checked')
         cy.wait(5000)
@@ -28,10 +26,10 @@ describe("Automation demo site", function () {
     })
     it("Language selection", function () {
 
-        // cy.get("#msdd").select('Arabic').should('have.id','Arabic')
-        //cy.contains('.oxd-select-text-input', 'English').click();
-        cy.get('#msdd').click();
-        //cy.contains('.', 'Option 4').click(); // Select the desired option from the list
+        // cy.get('#msdd').click();
+        // cy.get('div.ui-autocomplete-multiselect')
+        // .contains('arabic') 
+        // .click();
         cy.get("#Skills.form-control").select('Analytics').should('have.value', 'Analytics')
         cy.get('span.select2-selection__rendered').click({ force: true });
         cy.contains('.select2-results__option', 'Australia').click();
@@ -39,5 +37,14 @@ describe("Automation demo site", function () {
     })
     it("Date filled section",function(){
         cy.get('#yearbox').select('2014').should('have.value','2014')
+        cy.get("select[placeholder='Month']").select('January').should('have.value','January')
+        cy.get('#daybox').select('1').should('have.value','1')
+    })
+    it('Password',function(){
+        cy.get('#firstpassword').type('@Chumma')
+        cy.get('#secondpassword').type('@Chumma')
+
+        //Click the submit button
+        cy.get('#submitbtn').click()
     })
 })
