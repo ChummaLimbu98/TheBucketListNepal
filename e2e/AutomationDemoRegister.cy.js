@@ -5,7 +5,7 @@ describe("Automation demo site", function () {
         cy.visit("https://demo.automationtesting.in/Register.html")
 
     })
-    it.only("Describs input field", function () {
+    it("Describs input field", function () {
         cy.get("input[placeholder='First Name']").type("Ram")
         cy.get("input[placeholder='Last Name']").type("Shah")
         cy.get('.col-md-8 > .form-control').type('KTM')
